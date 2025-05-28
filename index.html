@@ -12,34 +12,44 @@
   <title>SOCTERA</title>
 </head>
 <body>
-  <header class="header">
+  <div class="wrapper">
+    <header class="header" id="home">
+   <div class="menu--close"></div>
     <div class="container">
       <div class="hearer__wrapper">
         <a class="logo" href="#!">
           <img class="logo__img" src="images/logo.svg" alt="logo">
         </a>
-        <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link" href="#!">Home</a>
+        <nav class="menu__list">
+          <ul class="menu__lists">
+            <li class="menu__close">
+              <button class="menu__close-btn">
+                <img src="images/modal-close.svg" alt="modal-close">
+              </button>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#!">Applications</a>
+              <a class="menu__link" href="#home">Home</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#!">About</a>
+              <a class="menu__link" href="#applications">Applications</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#!">Our Team</a>
+              <a class="menu__link" href="#about">About</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#our-team">Our Team</a>
             </li>
           </ul>
-        </nav>
-        <button class="header__btn" type="button">
+          <button class="header__btn" type="button">
           Contact Us
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"  viewBox="0 0 24 24" fill="none">
             <rect width="24" height="24" rx="12" fill="#0F6EC9"/>
             <path d="M7 12H16M16 12L11.9091 8M16 12L11.9091 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+            </svg>
+          </button>
+        </nav>
+        <button class="menu__btn">
+          <img src="images/modal-menu.svg" alt="modal-menu">
         </button>
       </div>
     </div>
@@ -70,22 +80,22 @@
         <div class="partners__inner">
           <ul class="partners__list">
             <li>
-              <img src="images/activate.svg" alt="activate" width="162px" height="40px">
+              <img class="partner__item-1" src="images/activate.svg" alt="activate">
             </li>
             <li>
-              <img src="images/nsf.svg" alt="nsf" width="110px" height="110px">
+              <img class="partner__item-2" src="images/nsf.svg" alt="nsf">
             </li>
             <li>
-              <img src="images/sandia.svg" alt="sandia" width="180px" height="73px">
+              <img class="partner__item-3" src="images/sandia.svg" alt="sandia">
             </li>
             <li>
-              <img src="images/university.svg" alt="university" width="110px" height="110px">
+              <img class="partner__item-4" src="images/university.svg" alt="university">
             </li>
           </ul>
           </div>
       </div>
     </section>
-    <section class="applications">
+    <section class="applications" id="applications">
       <div class="container">
         <h2 class="applications__title">
           We Bring the Communications Revolution in Range
@@ -121,6 +131,141 @@
         </div>
       </div>
     </section>
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__wrapper">
+          <div class="about-us">
+            <h2 class="about-us__title">About</h2>
+            <div class="about-us__text">
+              <p>
+                Born at the School of Electrical and Computer Engineering at Cornell University, Soctera is bringing its aluminum nitride technology to market to enable tomorrow’s communication systems.
+              </p>
+              <p>
+                Beyond just power amplifiers, AlN allows for the monolithic integration of electronic filters, high-current
+                complementary devices for computational logic, and waveguides—a unique feature of this incredible material.
+              </p>
+              <p>
+                This unprecedented level of integration will open a wide range of new application spaces for a host of high speed
+                communication systems.
+              </p>
+            </div>
+            <p class="about-us__contact-text">Want to be a part of it? Contact us today for partnership opportunities and job openings:</p>
+            <div class="about-us__contact-link">
+              <img src="images/mail-icon.png" alt="mail-icon">
+              <a href="mailto:austino.hickmain@soctera.com">austin.hickman@soctera.com</a>
+            </div>
+          </div>
+          <div class="about-news">
+            <a class="about-news__img-link" href="#!">Company News</a>
+            <div class="news-text">
+              <a class="about-news__link" href="#!">Entrepreneurs find home as Activate Fellows at Praxis Center</a>
+              <p class="about-news__text">Alexa Schmitz Ph.D '18, co-founder and CEO of REEgen,and Austin Hickman Ph.D. '21,
+                co-founder and CEO of Soctera, have turned their Cornell-based research into.... 
+                <span>
+                  <a class="about-news__text-link" href="#!">Read More </a>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="our-team" id="our-team">
+      <div class="container">
+        <h2 class="our-team__title">Our Team</h2>
+        <div class="our-team__wrapper">
+          <div class="our-team__wrapper-item">
+            <img src="images/austin.png" alt="austin">
+            <div class="our-team__inner-inner">
+              <p class="our-team__inner-name">Dr. Austin Hickman</p>
+              <p class="our-team__inner-job">Co-Founder and CEO</p>
+              <p class="our-team__inner-text">
+                Austin graduated with his Ph.D. from Cornell University in Electrical and Computer Engineering in 2021. His research focused on the fabrication and characterization of III-nitride high-frequency transistors. 
+              </p>
+            </div>
+          </div>
+          <div class="our-team__wrapper-item">
+            <img src="images/miller.png" alt="miller">
+            <div class="our-team__inner-inner">
+              <p class="our-team__inner-name">Shankar Miller-Murthy</p>
+              <p class="our-team__inner-job">RF Device Engineer</p>
+              <p class="our-team__inner-text">
+                Shankar graduated with his Masters from the University of Kentucky in Material Science in 2022, and earned his Bachelors in Electrical Engineering in 2020 from the same institution. Shankar leads device fabrication and characterization efforts at Soctera. 
+              </p>
+            </div>
+          </div>
+          <div class="our-team__wrapper-item">
+            <img src="images/robert.png" alt="robert">
+            <div class="our-team__inner-inner">
+              <p class="our-team__inner-name">Robert Scharf</p>
+              <p class="our-team__inner-job">Director of the Praxis Center for Venture Development</p>
+              <p class="our-team__inner-text">
+                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings 
+              </p>
+            </div>
+          </div>
+          <div class="our-team__wrapper-item">
+            <img src="images/jena.png" alt="jena">
+            <div class="our-team__inner-inner">
+              <p class="our-team__inner-name">Prof. Debdeep Jena</p>
+              <p class="our-team__inner-job">Co-Founder and Advisor</p>
+              <p class="our-team__inner-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="our-team__wrapper-item">
+            <img src="images/grace.png" alt="grace">
+            <div class="our-team__inner-inner">
+              <p class="our-team__inner-name">Prof. Grace Xing</p>
+              <p class="our-team__inner-job">Co-Founder and Advisor</p>
+              <p class="our-team__inner-text">
+                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <a class="footer-logo" href="#!">
+          <img class="logo__img" src="images/footer-logo.svg" alt="logo">
+        </a>
+        <nav class="footer__menu">
+          <ul class="footer-menu__list">
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#home">Home</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#applications">Applications</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#about">About</a>
+            </li>
+            <li class="footer-menu__item">
+              <a class="footer-menu__link" href="#our-team">Our Team</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="footer__btn" type="button">
+          Contact Us
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" rx="12" fill="#0F6EC9"/>
+            <path d="M7 12H16M16 12L11.9091 8M16 12L11.9091 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="copy">©2023 by Soctera.</div>
+    </div>
+  </footer> -->
+  <a href="#home" class="button-up hidden" id="btnUp">
+    UP
+    <img src="images/arrow-white.svg" alt="arrow-up">
+  </a>
+  </div>
+  <script src="js/script.js"></script>
 </body>
 </html>
