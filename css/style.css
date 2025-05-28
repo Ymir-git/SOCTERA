@@ -11,10 +11,17 @@ body{
   padding-right: 15px;
   margin: 0 auto;
 }
+html,
+body{
+  height: 100%;
+}
 .wrapper{
   min-height: 100%;
   display: flex;
   flex-direction: column;
+}
+main{
+  flex-grow: 1;
 }
 
 
@@ -647,7 +654,7 @@ background: linear-gradient(to bottom,
     padding: 180px 40px 40px;
     transition: transform .5s ease;
     max-width: 250px;
-    height: 100vh;
+    height: 100%;
     align-items: flex-start;
   }
   .menu__lists{
@@ -735,8 +742,11 @@ background: linear-gradient(to bottom,
   }
 }
 @media (max-width: 520px){
-  .about-news{
-    min-height: 600px;
+  .about-news__link{
+    font-size: 18px;
+  }
+  .about-news__text{
+    font-size: 14px;
   }
 }
 @media (max-width: 425px){
@@ -750,10 +760,12 @@ background: linear-gradient(to bottom,
     font-size: 20px;
   }
   .applications__contacts-text{
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 30px;
   }
+}
+@media (max-width: 375px){
   .about-news{
-    min-height: 600px;
+    height: 600px;
   }
 }
