@@ -633,15 +633,65 @@ background: linear-gradient(to bottom,
     flex-grow: 1;
     flex-basis: auto;
   }
+    .about {
+    padding-bottom: 80px;
+  }
+  .our-team__title{
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  .our-team__inner-inner{
+    text-align: start;
+  }
+  .our-team__inner-name{
+    font-size: 20px;
+    letter-spacing: -0.36px;
+  }
+  .our-team__wrapper-item{
+    flex-direction: row;
+    max-width: none;
+    height: 280px;
+  }
+  .our-team__wrapper-item img{
+    width: 344px;
+    height: 280px;  
+    object-fit: cover;
+    border-radius: 50px;
+  }
+  .our-team{
+    padding-bottom: 120px;
+  }
 }
 @media (max-width: 900px){
   .applications-item{
     height: 406px;
   }
+  .footer-menu__list{
+    gap: 10px 80px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: 0;
+  }
+  .footer-menu__item{
+    flex-basis: 33%;
+  }
+  .footer__wrapper{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .copy{
+    padding-bottom: 20px;
+  }
 }
 @media (max-width: 800px){
   .wrapper{
     position: relative;
+  }
+  .hearer__wrapper{
+    padding-top: 12px;
+  }
+  .logo{
+    flex-grow: unset;
   }
   .menu__list{
     transform: translateX(100%);
@@ -651,7 +701,7 @@ background: linear-gradient(to bottom,
     top: 0;
     right: 0;
     background-color: #fff;
-    padding: 180px 40px 70px;
+    padding: 180px 40px 80px;
     transition: transform .5s ease;
     max-width: 250px;
     height: 100vh;
@@ -692,6 +742,7 @@ background: linear-gradient(to bottom,
   }
   .applications-item{
     flex-basis: auto;
+    flex-grow: 1;
     padding: 40px;
   }
   .applications-item__title{
@@ -719,6 +770,7 @@ background: linear-gradient(to bottom,
   .applications__contacts{
     background-position: right -50px bottom, center center;
   }
+
 }
 @media (max-width: 700px){
   .applications__contacts{
@@ -729,6 +781,26 @@ background: linear-gradient(to bottom,
   }
   .about-news__link{
     white-space: wrap;
+  }
+  .our-team__wrapper{
+    gap: 15px;
+  }
+  .our-team__wrapper-item{
+    flex-direction: column;
+    height: auto;
+  }
+  .our-team__wrapper-item img{
+    width: 100%;
+  }
+  .our-team__inner-inner{
+    text-align: center;
+    padding: 25px;
+  }
+  .footer__wrapper{
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 @media (max-width: 630px){
@@ -762,6 +834,9 @@ background: linear-gradient(to bottom,
   .applications__contacts-text{
     font-size: 12px;
     margin-bottom: 30px;
+  }
+  .footer-menu__list{
+    gap: 10px 40px;
   }
 }
 @media (max-width: 375px){
