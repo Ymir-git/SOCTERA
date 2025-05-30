@@ -55,3 +55,35 @@ menuClose.addEventListener('click',()=>{
   menuList.classList.remove('menu__list--open');
   menuShadow.classList.remove('menu--open');
 });
+menuShadow.addEventListener('click', function(event) {
+    if (event.target === menuShadow) {
+      menuList.classList.remove('menu__list--open');
+      menuShadow.classList.remove('menu--open');
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const openPopupBtns = document.querySelectorAll('.open-popup-btn');
+    const closePopupBtn = document.getElementById('closePopupBtn');
+    const popupOverlay = document.getElementById('popupOverlay');
+
+    // Открытие поп-апа для каждой кнопки
+    openPopupBtns.forEach(button => {
+        button.addEventListener('click', function() {
+            popupOverlay.style.display = 'flex'; // Показываем оверлей
+        });
+    });
+
+    // Закрытие поп-апа по кнопке "x"
+    closePopupBtn.addEventListener('click', function() {
+        popupOverlay.style.display = 'none'; // Скрываем оверлей
+    });
+
+    // Закрытие поп-апа при клике вне его содержимого (на оверлее)
+    popupOverlay.addEventListener('click', function(event) {
+        if (event.target === popupOverlay) { // Проверяем, что клик был именно по оверлею, а не по содержимому поп-апа
+            popupOverlay.style.display = 'none';
+        }
+    });
+});

@@ -580,10 +580,150 @@ background: linear-gradient(to bottom,
 
 
 
+.popup-overlay {
+  display: none;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5); 
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+}
+.popup-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 1236px; 
+  position: relative; 
+  animation: fadeIn 0.3s ease-out; 
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.close-btn {
+  position: absolute;
+  top: -30px;
+  right: -45px;
+  padding: 13px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background: rgba(34, 38, 55, 0.15);
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: #555;
+}
+.popap-form{
+  width: 580px;
+}
+.popup-content__title{
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  margin-bottom: 10px;
+}
+.popup-content__text{
+  line-height: 160%;
+  letter-spacing: -0.32px;
+  opacity: 0.75;
+  max-width: 348px;
+  margin-bottom: 30px;
+}
+.form-group{
+  margin-bottom: 16px;
+  width: 100%;
+}
+.form-group__name{
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+.form-group input,
+.form-group textarea{
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(34, 38, 55, 0.05);
+  background: rgba(34, 38, 55, 0.03);
+  padding: 16px 20px;
+  resize: none;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: -0.32px;
+  opacity: 0.25;
+}
+.form-group input:hover,
+.form-group textarea:hover{
+  border: 1px solid rgba(34, 38, 55, 0.15);
+}
+.form-group input:focus,
+.form-group textarea:focus{
+  border: 1px solid rgba(15, 110, 201, 0.50);
+  outline: none;
+}
+.popap-form__btn{
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(255deg, #0F6EC9 16.18%, #4E94D8 100%);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.36px;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 16px;
+  padding: 16px 20px;
+  cursor: pointer;
+}
+.popap-form__btn:hover{
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), linear-gradient(255deg, #0F6EC9 16.18%, #4E94D8 100%);
+  box-shadow: 10px 10px 10px 0px rgba(15, 110, 201, 0.10);
+}
+.popap-form__btn:active{
+  background: linear-gradient(0deg, rgba(27, 29, 39, 0.10) 0%, rgba(27, 29, 39, 0.10) 100%), linear-gradient(255deg, #0F6EC9 16.18%, #4E94D8 100%);
+}
+.popap-img{
+  width: 538px;
+  height: 539px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 32px;
+}
 
+
+
+
+
+
+
+@media (max-width: 1400px){
+  .popap-form{
+    width: unset;
+  }
+}
 @media (max-width: 1200px){
   .applications__contacts{
     background-size: 60%, cover;
+  }
+  .popap-img {
+    width: 380px;
   }
 }
 @media (max-width: 1050px){
@@ -661,6 +801,12 @@ background: linear-gradient(to bottom,
   .our-team{
     padding-bottom: 120px;
   }
+  .popap-form{
+    width: 520px;
+  }
+  .popap-img{
+    display: none;
+  }
 }
 @media (max-width: 900px){
   .applications-item{
@@ -670,10 +816,8 @@ background: linear-gradient(to bottom,
     gap: 10px 80px;
     display: grid;
     grid-template-columns: 50% 50%;
+    justify-content: center;
     margin-left: 0;
-  }
-  .footer-menu__item{
-    flex-basis: 33%;
   }
   .footer__wrapper{
     padding-top: 60px;
@@ -770,6 +914,9 @@ background: linear-gradient(to bottom,
   .applications__contacts{
     background-position: right -50px bottom, center center;
   }
+  .popup-content__title{
+    font-size: 24px;
+  }
 
 }
 @media (max-width: 700px){
@@ -802,6 +949,13 @@ background: linear-gradient(to bottom,
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  .popap-form{
+    width: unset;
+  }
+  .form-group__name {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 @media (max-width: 630px){
   .partners__inner{
@@ -811,6 +965,14 @@ background: linear-gradient(to bottom,
     flex-wrap: wrap;
     gap: 24px 120px;
     justify-content: space-around;
+  }
+  .close-btn {
+    top: 15px;
+    right: 15px;
+    background: rgba(34, 38, 55, 0.30);
+    padding: 6px;
+    width: 36px;
+    height: 36px;
   }
 }
 @media (max-width: 520px){
